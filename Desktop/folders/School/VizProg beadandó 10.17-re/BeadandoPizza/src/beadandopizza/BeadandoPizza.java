@@ -37,14 +37,10 @@ public class BeadandoPizza extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         buttonGroup2 = new javax.swing.ButtonGroup();
         pnlFelso = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblMotto = new javax.swing.JLabel();
+        lblRendeloifelulet = new javax.swing.JLabel();
+        lblPizzaHub = new javax.swing.JLabel();
         pnlPizzaink = new javax.swing.JPanel();
-        rdbDiavola = new javax.swing.JRadioButton();
-        rdbNegysajtos = new javax.swing.JRadioButton();
-        rdbHusimado = new javax.swing.JRadioButton();
-        rdbSonGoku = new javax.swing.JRadioButton();
         lblHusimadoMellett = new javax.swing.JLabel();
         lblSongokuMellett = new javax.swing.JLabel();
         lblNegysajtosMellett = new javax.swing.JLabel();
@@ -53,6 +49,10 @@ public class BeadandoPizza extends javax.swing.JFrame {
         txfHusimadoMellett = new javax.swing.JTextField();
         txfNegysajtosMellett = new javax.swing.JTextField();
         txfDiavolaMellett = new javax.swing.JTextField();
+        ckbHusimado = new javax.swing.JCheckBox();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
         pnlExtrafeltet = new javax.swing.JPanel();
         rdbHagyma = new javax.swing.JRadioButton();
         rdbPaprika = new javax.swing.JRadioButton();
@@ -66,9 +66,13 @@ public class BeadandoPizza extends javax.swing.JFrame {
         rdbBkFiz = new javax.swing.JRadioButton();
         rdbBkUtanvet = new javax.swing.JRadioButton();
         pnlEtlapkepek = new javax.swing.JPanel();
+        pnlHusimadoAr = new javax.swing.JPanel();
         lblHusimado = new javax.swing.JLabel();
-        lblNegysajtos = new javax.swing.JLabel();
+        pnlSonGokuAr = new javax.swing.JPanel();
         lblSongoku = new javax.swing.JLabel();
+        pnlNegysajtosAr = new javax.swing.JPanel();
+        lblNegysajtos = new javax.swing.JLabel();
+        pnlDiavolaAr = new javax.swing.JPanel();
         lblDiavola = new javax.swing.JLabel();
         pnlAtveletimod = new javax.swing.JPanel();
         cbxAtveteliMod = new javax.swing.JComboBox<>();
@@ -78,11 +82,11 @@ public class BeadandoPizza extends javax.swing.JFrame {
 
         pnlFelso.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel1.setText("Egyen egy finom pizzát, jó áron!");
+        lblMotto.setText("Egyen egy finom pizzát, jó áron!");
 
-        jLabel2.setText("Rendelői felület");
+        lblRendeloifelulet.setText("Rendelői felület");
 
-        jLabel3.setText("Pizza Hub");
+        lblPizzaHub.setText("Pizza Hub");
 
         javax.swing.GroupLayout pnlFelsoLayout = new javax.swing.GroupLayout(pnlFelso);
         pnlFelso.setLayout(pnlFelsoLayout);
@@ -90,11 +94,11 @@ public class BeadandoPizza extends javax.swing.JFrame {
             pnlFelsoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFelsoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(lblRendeloifelulet)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(98, 98, 98)
-                .addComponent(jLabel1)
+                .addComponent(lblPizzaHub)
+                .addGap(134, 134, 134)
+                .addComponent(lblMotto)
                 .addContainerGap())
         );
         pnlFelsoLayout.setVerticalGroup(
@@ -102,41 +106,13 @@ public class BeadandoPizza extends javax.swing.JFrame {
             .addGroup(pnlFelsoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlFelsoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel1))
+                    .addComponent(lblRendeloifelulet)
+                    .addComponent(lblPizzaHub)
+                    .addComponent(lblMotto))
                 .addContainerGap())
         );
 
         pnlPizzaink.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hagyományos Pizzáink (32 cm)", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
-
-        rdbDiavola.setText("Diavola");
-        rdbDiavola.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdbDiavolaActionPerformed(evt);
-            }
-        });
-
-        rdbNegysajtos.setText("Négysajtos");
-        rdbNegysajtos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdbNegysajtosActionPerformed(evt);
-            }
-        });
-
-        rdbHusimado.setText("Húsimádó");
-        rdbHusimado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdbHusimadoActionPerformed(evt);
-            }
-        });
-
-        rdbSonGoku.setText("Son-Goku");
-        rdbSonGoku.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rdbSonGokuActionPerformed(evt);
-            }
-        });
 
         lblHusimadoMellett.setText("db:");
 
@@ -154,6 +130,34 @@ public class BeadandoPizza extends javax.swing.JFrame {
 
         txfDiavolaMellett.setText("Nem kérek");
 
+        ckbHusimado.setText("Húsimádó");
+        ckbHusimado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ckbHusimadoActionPerformed(evt);
+            }
+        });
+
+        jCheckBox1.setText("Son-Goku");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox2.setText("Négysajtos");
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
+
+        jCheckBox3.setText("Diavola");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlPizzainkLayout = new javax.swing.GroupLayout(pnlPizzaink);
         pnlPizzaink.setLayout(pnlPizzainkLayout);
         pnlPizzainkLayout.setHorizontalGroup(
@@ -162,15 +166,15 @@ public class BeadandoPizza extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlPizzainkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlPizzainkLayout.createSequentialGroup()
-                        .addComponent(rdbHusimado)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ckbHusimado)
+                        .addGap(12, 12, 12)
                         .addComponent(lblHusimadoMellett)
                         .addGap(4, 4, 4)
                         .addComponent(txfHusimadoMellett, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE))
                     .addGroup(pnlPizzainkLayout.createSequentialGroup()
                         .addGroup(pnlPizzainkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rdbNegysajtos)
-                            .addComponent(rdbDiavola))
+                            .addComponent(jCheckBox2)
+                            .addComponent(jCheckBox3))
                         .addGroup(pnlPizzainkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlPizzainkLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -183,8 +187,8 @@ public class BeadandoPizza extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txfDiavolaMellett))))
                     .addGroup(pnlPizzainkLayout.createSequentialGroup()
-                        .addComponent(rdbSonGoku)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCheckBox1)
+                        .addGap(12, 12, 12)
                         .addComponent(lblSongokuMellett)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txfSongukoMellett)))
@@ -195,36 +199,36 @@ public class BeadandoPizza extends javax.swing.JFrame {
             .addGroup(pnlPizzainkLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlPizzainkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rdbHusimado)
                     .addComponent(lblHusimadoMellett)
-                    .addComponent(txfHusimadoMellett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txfHusimadoMellett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ckbHusimado))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlPizzainkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rdbSonGoku)
                     .addComponent(lblSongokuMellett)
-                    .addComponent(txfSongukoMellett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txfSongukoMellett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox1))
                 .addGap(6, 6, 6)
                 .addGroup(pnlPizzainkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rdbNegysajtos)
                     .addComponent(lblNegysajtosMellett)
-                    .addComponent(txfNegysajtosMellett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txfNegysajtosMellett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlPizzainkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rdbDiavola)
                     .addComponent(lblDiavolaMellett)
-                    .addComponent(txfDiavolaMellett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                    .addComponent(txfDiavolaMellett, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jCheckBox3))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pnlExtrafeltet.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Extra feltét választása", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
 
-        rdbHagyma.setText("Hagyma");
+        rdbHagyma.setText("Hagyma - 150 ft");
 
-        rdbPaprika.setText("Paprika");
+        rdbPaprika.setText("Paprika - 80 ft");
 
-        rdbJalapeno.setText("Jalapeno");
+        rdbJalapeno.setText("Jalapeno - 100 ft");
 
-        rdbSzalami.setText("Szalámi");
+        rdbSzalami.setText("Szalámi - 90 ft");
 
         javax.swing.GroupLayout pnlExtrafeltetLayout = new javax.swing.GroupLayout(pnlExtrafeltet);
         pnlExtrafeltet.setLayout(pnlExtrafeltetLayout);
@@ -237,7 +241,7 @@ public class BeadandoPizza extends javax.swing.JFrame {
                     .addComponent(rdbHagyma)
                     .addComponent(rdbJalapeno)
                     .addComponent(rdbPaprika))
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         pnlExtrafeltetLayout.setVerticalGroup(
             pnlExtrafeltetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -269,6 +273,7 @@ public class BeadandoPizza extends javax.swing.JFrame {
         pnlFizetesimod.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Fizetési mód", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
 
         buttonGroup1.add(rdbKp);
+        rdbKp.setSelected(true);
         rdbKp.setText("Készpénz");
 
         buttonGroup1.add(rdbUtalas);
@@ -307,35 +312,119 @@ public class BeadandoPizza extends javax.swing.JFrame {
                 .addGap(12, 12, 12))
         );
 
-        pnlEtlapkepek.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ételeink megtekintése", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+        pnlEtlapkepek.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Ételeink megtekintése & Árak", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
 
-        lblHusimado.setText("Húsimádó pizza");
+        pnlHusimadoAr.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "1700 ft", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+
+        lblHusimado.setForeground(new java.awt.Color(51, 51, 255));
+        lblHusimado.setText("<html><u>Húsimádó pizza</u>");
+        lblHusimado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblHusimado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblHusimadoMouseClicked(evt);
             }
         });
 
-        lblNegysajtos.setText("Négysajtos pizza");
-        lblNegysajtos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblNegysajtosMouseClicked(evt);
-            }
-        });
+        javax.swing.GroupLayout pnlHusimadoArLayout = new javax.swing.GroupLayout(pnlHusimadoAr);
+        pnlHusimadoAr.setLayout(pnlHusimadoArLayout);
+        pnlHusimadoArLayout.setHorizontalGroup(
+            pnlHusimadoArLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHusimadoArLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblHusimado, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        pnlHusimadoArLayout.setVerticalGroup(
+            pnlHusimadoArLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHusimadoArLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblHusimado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
-        lblSongoku.setText("Son-Goku pizza");
+        pnlSonGokuAr.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "1900 ft", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+
+        lblSongoku.setForeground(new java.awt.Color(51, 51, 255));
+        lblSongoku.setText("<html><u>Son-Goku pizza</u>");
+        lblSongoku.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblSongoku.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblSongokuMouseClicked(evt);
             }
         });
 
-        lblDiavola.setText("Diavola pizza");
+        javax.swing.GroupLayout pnlSonGokuArLayout = new javax.swing.GroupLayout(pnlSonGokuAr);
+        pnlSonGokuAr.setLayout(pnlSonGokuArLayout);
+        pnlSonGokuArLayout.setHorizontalGroup(
+            pnlSonGokuArLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSonGokuArLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblSongoku, javax.swing.GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        pnlSonGokuArLayout.setVerticalGroup(
+            pnlSonGokuArLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSonGokuArLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblSongoku, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        pnlNegysajtosAr.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "2000 ft", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+
+        lblNegysajtos.setForeground(new java.awt.Color(51, 51, 255));
+        lblNegysajtos.setText("<html><u>Négysajtos pizza<u/>");
+        lblNegysajtos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lblNegysajtos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblNegysajtosMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlNegysajtosArLayout = new javax.swing.GroupLayout(pnlNegysajtosAr);
+        pnlNegysajtosAr.setLayout(pnlNegysajtosArLayout);
+        pnlNegysajtosArLayout.setHorizontalGroup(
+            pnlNegysajtosArLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNegysajtosArLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblNegysajtos, javax.swing.GroupLayout.DEFAULT_SIZE, 99, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        pnlNegysajtosArLayout.setVerticalGroup(
+            pnlNegysajtosArLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlNegysajtosArLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblNegysajtos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        pnlDiavolaAr.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "1900 ft", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP));
+
+        lblDiavola.setForeground(new java.awt.Color(51, 51, 255));
+        lblDiavola.setText("<html><u>Diavola pizza</u>");
+        lblDiavola.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblDiavola.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblDiavolaMouseClicked(evt);
             }
         });
+
+        javax.swing.GroupLayout pnlDiavolaArLayout = new javax.swing.GroupLayout(pnlDiavolaAr);
+        pnlDiavolaAr.setLayout(pnlDiavolaArLayout);
+        pnlDiavolaArLayout.setHorizontalGroup(
+            pnlDiavolaArLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDiavolaArLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDiavola, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        pnlDiavolaArLayout.setVerticalGroup(
+            pnlDiavolaArLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDiavolaArLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDiavola, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout pnlEtlapkepekLayout = new javax.swing.GroupLayout(pnlEtlapkepek);
         pnlEtlapkepek.setLayout(pnlEtlapkepekLayout);
@@ -343,29 +432,26 @@ public class BeadandoPizza extends javax.swing.JFrame {
             pnlEtlapkepekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlEtlapkepekLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblHusimado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlHusimadoAr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(29, 29, 29)
-                .addComponent(lblSongoku, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlSonGokuAr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(79, 79, 79)
-                .addComponent(lblNegysajtos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnlNegysajtosAr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(41, 41, 41)
-                .addComponent(lblDiavola, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlDiavolaAr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlEtlapkepekLayout.setVerticalGroup(
             pnlEtlapkepekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlEtlapkepekLayout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEtlapkepekLayout.createSequentialGroup()
+                .addContainerGap(7, Short.MAX_VALUE)
                 .addGroup(pnlEtlapkepekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlSonGokuAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(pnlHusimadoAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlEtlapkepekLayout.createSequentialGroup()
-                        .addGroup(pnlEtlapkepekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblHusimado)
-                            .addComponent(lblSongoku))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEtlapkepekLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(pnlEtlapkepekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblNegysajtos)
-                            .addComponent(lblDiavola))))
+                        .addGroup(pnlEtlapkepekLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pnlDiavolaAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnlNegysajtosAr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
 
@@ -377,10 +463,10 @@ public class BeadandoPizza extends javax.swing.JFrame {
         pnlAtveletimod.setLayout(pnlAtveletimodLayout);
         pnlAtveletimodLayout.setHorizontalGroup(
             pnlAtveletimodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlAtveletimodLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAtveletimodLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(cbxAtveteliMod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(100, 100, 100))
         );
         pnlAtveletimodLayout.setVerticalGroup(
             pnlAtveletimodLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -398,17 +484,16 @@ public class BeadandoPizza extends javax.swing.JFrame {
                     .addComponent(pnlFelso, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(pnlPizzaink, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(pnlExtrafeltet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(pnlFizetesimod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 2, Short.MAX_VALUE))
+                        .addGap(39, 39, 39)
+                        .addComponent(pnlFizetesimod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addComponent(btnBezaras)
-                        .addGap(18, 18, 18)
+                        .addComponent(btnBezaras, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pnlAtveletimod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnLeadas)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLeadas, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -421,14 +506,22 @@ public class BeadandoPizza extends javax.swing.JFrame {
                     .addComponent(pnlPizzaink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlExtrafeltet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlFizetesimod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(pnlEtlapkepek, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlAtveletimod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnBezaras, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnLeadas, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnBezaras)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnLeadas)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pnlAtveletimod, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         pack();
@@ -473,29 +566,29 @@ public class BeadandoPizza extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Sikeres megrendelés!");
         }else{
             JOptionPane.showMessageDialog(null,"Hiba! Nincs átvételi mód megadva!");
-}
+        }
+  
     }//GEN-LAST:event_btnLeadasActionPerformed
 
     private void btnBezarasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBezarasActionPerformed
         System.exit(0);
     }//GEN-LAST:event_btnBezarasActionPerformed
 
-    private void rdbHusimadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbHusimadoActionPerformed
+    private void ckbHusimadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ckbHusimadoActionPerformed
         txfHusimadoMellett.setText("1");
-        JOptionPane.showMessageDialog(null, "A kiválasztott Húsimádó pizza összege 1500 Ft.");
-    }//GEN-LAST:event_rdbHusimadoActionPerformed
+    }//GEN-LAST:event_ckbHusimadoActionPerformed
 
-    private void rdbSonGokuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbSonGokuActionPerformed
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         txfSongukoMellett.setText("1");
-    }//GEN-LAST:event_rdbSonGokuActionPerformed
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
-    private void rdbNegysajtosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbNegysajtosActionPerformed
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         txfNegysajtosMellett.setText("1");
-    }//GEN-LAST:event_rdbNegysajtosActionPerformed
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
 
-    private void rdbDiavolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbDiavolaActionPerformed
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
         txfDiavolaMellett.setText("1");
-    }//GEN-LAST:event_rdbDiavolaActionPerformed
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -538,33 +631,37 @@ public class BeadandoPizza extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JComboBox<String> cbxAtveteliMod;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JCheckBox ckbHusimado;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JLabel lblDiavola;
     private javax.swing.JLabel lblDiavolaMellett;
     private javax.swing.JLabel lblHusimado;
     private javax.swing.JLabel lblHusimadoMellett;
+    private javax.swing.JLabel lblMotto;
     private javax.swing.JLabel lblNegysajtos;
     private javax.swing.JLabel lblNegysajtosMellett;
+    private javax.swing.JLabel lblPizzaHub;
+    private javax.swing.JLabel lblRendeloifelulet;
     private javax.swing.JLabel lblSongoku;
     private javax.swing.JLabel lblSongokuMellett;
     private javax.swing.JPanel pnlAtveletimod;
+    private javax.swing.JPanel pnlDiavolaAr;
     private javax.swing.JPanel pnlEtlapkepek;
     private javax.swing.JPanel pnlExtrafeltet;
     private javax.swing.JPanel pnlFelso;
     private javax.swing.JPanel pnlFizetesimod;
+    private javax.swing.JPanel pnlHusimadoAr;
+    private javax.swing.JPanel pnlNegysajtosAr;
     private javax.swing.JPanel pnlPizzaink;
+    private javax.swing.JPanel pnlSonGokuAr;
     private javax.swing.JRadioButton rdbBkFiz;
     private javax.swing.JRadioButton rdbBkUtanvet;
-    private javax.swing.JRadioButton rdbDiavola;
     private javax.swing.JRadioButton rdbHagyma;
-    private javax.swing.JRadioButton rdbHusimado;
     private javax.swing.JRadioButton rdbJalapeno;
     private javax.swing.JRadioButton rdbKp;
-    private javax.swing.JRadioButton rdbNegysajtos;
     private javax.swing.JRadioButton rdbPaprika;
-    private javax.swing.JRadioButton rdbSonGoku;
     private javax.swing.JRadioButton rdbSzalami;
     private javax.swing.JRadioButton rdbUtalas;
     private javax.swing.JTextField txfDiavolaMellett;
