@@ -482,6 +482,7 @@ public class BeadandoPizza extends javax.swing.JFrame {
 
     private void rdbHusimadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbHusimadoActionPerformed
         txfHusimadoMellett.setText("1");
+        JOptionPane.showMessageDialog(null, "A kiválasztott Húsimádó pizza összege 1500 Ft.");
     }//GEN-LAST:event_rdbHusimadoActionPerformed
 
     private void rdbSonGokuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdbSonGokuActionPerformed
